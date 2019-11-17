@@ -19,6 +19,7 @@
 		E8AAE614237F851500709F2A /* AddWeatherCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AAE613237F851500709F2A /* AddWeatherCityViewController.swift */; };
 		E8B3CF972380FD0900F7F748 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3CF962380FD0900F7F748 /* Double+Extensions.swift */; };
 		E8B3CF99238107B000F7F748 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3CF98238107B000F7F748 /* SettingsTableViewController.swift */; };
+		E8CA6BF02381FE6F00CAA651 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6BEF2381FE6F00CAA651 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E8AAE613237F851500709F2A /* AddWeatherCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeatherCityViewController.swift; sourceTree = "<group>"; };
 		E8B3CF962380FD0900F7F748 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		E8B3CF98238107B000F7F748 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		E8CA6BEF2381FE6F00CAA651 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		E89EA166237FF55C0088B545 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E8CA6BEF2381FE6F00CAA651 /* SettingsViewModel.swift */,
 				E89EA167237FF56D0088B545 /* WeatherListViewModel.swift */,
 			);
 			path = ViewModel;
@@ -110,9 +113,9 @@
 		E8AAE610237F846D00709F2A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E8AAE611237F849000709F2A /* WeatherListTableViewController.swift */,
 				E8AAE613237F851500709F2A /* AddWeatherCityViewController.swift */,
 				E8B3CF98238107B000F7F748 /* SettingsTableViewController.swift */,
+				E8AAE611237F849000709F2A /* WeatherListTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				E8616B11237F6DBA00D7E1AA /* AppDelegate.swift in Sources */,
 				E89EA165237FEA770088B545 /* Webservice.swift in Sources */,
 				E89EA168237FF56D0088B545 /* WeatherListViewModel.swift in Sources */,
+				E8CA6BF02381FE6F00CAA651 /* SettingsViewModel.swift in Sources */,
 				E89EA162237FE43F0088B545 /* WeatherCell.swift in Sources */,
 				E8AAE614237F851500709F2A /* AddWeatherCityViewController.swift in Sources */,
 				E8616B13237F6DBA00D7E1AA /* SceneDelegate.swift in Sources */,
