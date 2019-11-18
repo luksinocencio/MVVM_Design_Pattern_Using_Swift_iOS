@@ -12,7 +12,7 @@
             <objects>
                 <tableViewController id="h3L-eD-2Fd" customClass="SettingsTableViewController" customModule="GoodWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ywt-y4-X2w">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="2042.0289855072465" y="-719.19642857142856"/>
         </scene>
-        <!--Good News-->
+        <!--Good Weather-->
         <scene sceneID="KXj-Lo-9er">
             <objects>
                 <tableViewController id="AJK-ki-wK9" customClass="WeatherListTableViewController" customModule="GoodWeather" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                             <outlet property="delegate" destination="AJK-ki-wK9" id="DLh-cb-1W6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Good News" id="HqT-Be-gfm">
+                    <navigationItem key="navigationItem" title="Good Weather" id="HqT-Be-gfm">
                         <barButtonItem key="leftBarButtonItem" title="Settings" image="settings" id="yqm-ly-t3c">
                             <connections>
                                 <segue destination="BUf-1b-t8F" kind="presentation" identifier="SettingsSegue" id="eVm-J8-P6U"/>
@@ -112,7 +112,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DjX-Rf-8aI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WUW-xb-EKw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -129,7 +128,7 @@
             <objects>
                 <viewController id="H7y-Vp-NwC" customClass="AddWeatherCityViewController" customModule="GoodWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lr1-h4-0Wu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20E-7k-f48">
@@ -176,7 +175,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EZw-HV-IOw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tg5-Yv-f4a">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -194,7 +192,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BUf-1b-t8F" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o9O-TY-Dni">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

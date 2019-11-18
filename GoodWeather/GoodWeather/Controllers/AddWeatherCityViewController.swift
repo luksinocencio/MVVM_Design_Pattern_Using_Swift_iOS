@@ -24,28 +24,35 @@ class AddWeatherCityViewController: UIViewController {
     }
     
     @IBAction func saveCityButtonPressed() {
-       if let city = cityNameTextField.text {
-           let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&APPID=1f0f2993ffacf610731c60b5a6bb5607&units=metric")!
-        
-        print(weatherURL)
-           
-           let weatherResource = Resource<WeatherViewModel>(url: weatherURL) { data in
-               
-            guard let weatherVM = try? JSONDecoder().decode(WeatherViewModel.self, from: data) else {
-                fatalError("decoding error")
+        if let city = cityNameTextField.text {
+            // get the default settings for temperature
+            let userDefaults = UserDefaults.standard
+            var unit = ""
+            if let value = userDefaults.value(forKey: "unit") as? String {
+                unit = value
             }
-               return weatherVM
-           }
-           
-           Webservice().load(resource: weatherResource) { [weak self] result in
-            if let weatherVM = result {
-                if let delegate = self?.delegate {
-                    delegate.addWeatherDidSave(vm: weatherVM)
-                    self?.dismiss(animated: true, completion: nil)
+            
+            let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&APPID=1f0f2993ffacf610731c60b5a6bb5607&units=\(unit)")!
+            
+            print(weatherURL)
+            
+            let weatherResource = Resource<WeatherViewModel>(url: weatherURL) { data in
+                
+                guard let weatherVM = try? JSONDecoder().decode(WeatherViewModel.self, from: data) else {
+                    fatalError("decoding error")
+                }
+                return weatherVM
+            }
+            
+            Webservice().load(resource: weatherResource) { [weak self] result in
+                if let weatherVM = result {
+                    if let delegate = self?.delegate {
+                        delegate.addWeatherDidSave(vm: weatherVM)
+                        self?.dismiss(animated: true, completion: nil)
+                    }
                 }
             }
-           }
-       }
+        }
     }
     
     @IBAction func close() {
