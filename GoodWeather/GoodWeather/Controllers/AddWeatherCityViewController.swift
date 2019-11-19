@@ -15,7 +15,26 @@ protocol AddWheatherDelegate {
 
 class AddWeatherCityViewController: UIViewController {
     
-    @IBOutlet weak var cityNameTextField: UITextField!
+    private var addCityViewModel = AddCityViewModel()
+    
+    @IBOutlet weak var stateTextField: BindingTextField! {
+        didSet {
+            stateTextField.bind { self.addCityViewModel.state = $0 }
+        }
+    }
+    
+    @IBOutlet weak var cityNameTextField: BindingTextField! {
+        didSet {
+            cityNameTextField.bind { self.addCityViewModel.city = $0 }
+        }
+    }
+    
+    
+    @IBOutlet weak var zipCodeTextField: BindingTextField! {
+        didSet {
+            zipCodeTextField.bind { self.addCityViewModel.zipCode = $0 }
+        }
+    }
     
     var delegate: AddWheatherDelegate?
     
@@ -24,6 +43,9 @@ class AddWeatherCityViewController: UIViewController {
     }
     
     @IBAction func saveCityButtonPressed() {
+        
+        print(self.addCityViewModel)
+        
         if let city = cityNameTextField.text {
             // get the default settings for temperature
             let userDefaults = UserDefaults.standard
@@ -60,6 +82,3 @@ class AddWeatherCityViewController: UIViewController {
     }
     
 }
-
-// units=metric
-// API Key = 1f0f2993ffacf610731c60b5a6bb5607
