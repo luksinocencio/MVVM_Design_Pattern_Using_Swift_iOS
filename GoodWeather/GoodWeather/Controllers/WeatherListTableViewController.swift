@@ -49,8 +49,21 @@ class WeatherListTableViewController: UITableViewController, AddWheatherDelegate
         case "SettingsSegue":
             prepareSegueForSettingsTableViewController(segue: segue)
             break
+        case "DetailsSegue":
+            prepareSegueForWeatherDetailsViewController(segue: segue)
+            break
         default: break
         }
+    }
+    
+    private func prepareSegueForWeatherDetailsViewController(segue: UIStoryboardSegue) {
+        guard let weatherDetailsVC = segue.destination as? WeatherDetailsViewController,
+            let indexPath = self.tableView.indexPathForSelectedRow else {
+                return
+        }
+        
+        let waetherVC = self.weatherListViewModel.modelAt(indexPath.row)
+        weatherDetailsVC.weatherViewModel = waetherVC
     }
     
     private func prepareSegueForSettingsTableViewController(segue: UIStoryboardSegue) {

@@ -81,7 +81,7 @@
                                 <connections>
                                     <outlet property="cityNameLabel" destination="U4L-cy-LcE" id="2qW-yk-bSR"/>
                                     <outlet property="temperatureLabel" destination="dZA-hE-oV2" id="xeM-tf-DAv"/>
-                                    <segue destination="wU2-pp-Quu" kind="show" identifier="detailsSegue" id="Hqh-f1-RrT"/>
+                                    <segue destination="wU2-pp-Quu" kind="show" identifier="DetailsSegue" id="Hqh-f1-RrT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -155,6 +155,12 @@
                         <viewLayoutGuide key="safeArea" id="bd3-pA-t5L"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="h23-wy-ECJ"/>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="gYD-Dw-PSf" id="ugE-Kj-c33"/>
+                        <outlet property="currentTemperatureLabel" destination="1uB-NF-3vK" id="q1i-Qe-4vL"/>
+                        <outlet property="maxTempLabel" destination="bUe-QE-an2" id="HPy-AE-iNV"/>
+                        <outlet property="minTempLabel" destination="p3H-zY-N9a" id="8Jq-LS-XcG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWh-vJ-FmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
