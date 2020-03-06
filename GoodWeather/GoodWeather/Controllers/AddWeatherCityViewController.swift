@@ -6,7 +6,6 @@
 //  Copyright © 2019 Lucas Inocencio. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 protocol AddWheatherDelegate {
@@ -59,10 +58,7 @@ class AddWeatherCityViewController: UIViewController {
             print(weatherURL)
             
             let weatherResource = Resource<WeatherViewModel>(url: weatherURL) { data in
-                
-                guard let weatherVM = try? JSONDecoder().decode(WeatherViewModel.self, from: data) else {
-                    fatalError("decoding error")
-                }
+                let weatherVM = try? JSONDecoder().decode(WeatherViewModel.self, from: data)
                 return weatherVM
             }
             

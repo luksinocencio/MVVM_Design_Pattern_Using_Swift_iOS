@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct WeatherListViewModel {
+class WeatherListViewModel {
     
-    private var weatherViewModels = [WeatherViewModel]()
+    private(set) var weatherViewModels = [WeatherViewModel]()
     
-    mutating func addWeatherViewModel(_ vm: WeatherViewModel) {
+    func addWeatherViewModel(_ vm: WeatherViewModel) {
         self.weatherViewModels.append(vm)
     }
     
@@ -24,29 +24,38 @@ struct WeatherListViewModel {
         return self.weatherViewModels[index]
     }
     
-    mutating private func toCelsius() {
-      weatherViewModels = weatherViewModels.map { vm in
-        let weatherModel = vm
-        weatherModel.currentTemperature.temperature.value = (weatherModel.currentTemperature.temperature.value - 32) * 5/9
-          return weatherModel
-      }
-    }
-    
-    mutating private func toFahrenheit() {
+    private func toCelsius() {
+        
         weatherViewModels = weatherViewModels.map { vm in
+            
             let weatherModel = vm
-            weatherModel.currentTemperature.temperature.value = (weatherModel.currentTemperature.temperature.value * 9/5) + 32
+            weatherModel.currentTemperature.temperature.value = (weatherModel.currentTemperature.temperature.value - 32) * 5/9
             return weatherModel
+            
         }
     }
     
-    mutating func updateUnit(to unit: Unit) {
+    private func toFahrenheit() {
+        
+        weatherViewModels = weatherViewModels.map { vm in
+            
+            let weatherModel = vm
+            weatherModel.currentTemperature.temperature.value = (weatherModel.currentTemperature.temperature.value * 9/5) + 32
+            return weatherModel
+            
+        }
+        
+    }
+    
+    func updateUnit(to unit: Unit) {
+        
         switch unit {
         case .celsius:
             toCelsius()
         case .fahrenheit:
             toFahrenheit()
         }
+        
     }
     
 }
@@ -74,23 +83,38 @@ class Dynamic<T>: Decodable where T: Decodable {
     private enum CodingKeys: CodingKey {
         case value
     }
-    
 }
 
 struct WeatherViewModel: Decodable {
+    
     let name: Dynamic<String>
     var currentTemperature: TemperatureViewModel
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        name = Dynamic(try container.decode(String.self, forKey: .name))
+        currentTemperature = try container.decode(TemperatureViewModel.self, forKey: .currentTemperature)
+    }
     
     private enum CodingKeys: String, CodingKey {
         case name
         case currentTemperature = "main"
     }
+    
 }
 
 struct TemperatureViewModel: Decodable {
+    
     var temperature: Dynamic<Double>
     let temperatureMin: Dynamic<Double>
     let temperatureMax: Dynamic<Double>
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        temperature = Dynamic(try container.decode(Double.self, forKey: .temperature))
+        temperatureMin = Dynamic(try container.decode(Double.self, forKey: .temperatureMin))
+        temperatureMax = Dynamic(try container.decode(Double.self, forKey: .temperatureMax))
+    }
     
     private enum CodingKeys: String, CodingKey {
         case temperature = "temp"
