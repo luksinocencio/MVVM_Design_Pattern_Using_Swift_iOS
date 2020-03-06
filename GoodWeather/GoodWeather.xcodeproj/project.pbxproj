@@ -23,6 +23,7 @@
 		E8C5FAFF2383D87300E4F949 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C5FAFE2383D87300E4F949 /* BindingTextField.swift */; };
 		E8C5FB012383DEBE00E4F949 /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C5FB002383DEBE00E4F949 /* WeatherDetailsViewController.swift */; };
 		E8CA6BF02381FE6F00CAA651 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6BEF2381FE6F00CAA651 /* SettingsViewModel.swift */; };
+		ED51F2702412CC57002A0ABB /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED51F26F2412CC57002A0ABB /* TableViewDataSource.swift */; };
 		EDBD0EF72412A46C00EA237D /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD0EF62412A46C00EA237D /* WeatherDataSource.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		E8C5FAFE2383D87300E4F949 /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		E8C5FB002383DEBE00E4F949 /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
 		E8CA6BEF2381FE6F00CAA651 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		ED51F26F2412CC57002A0ABB /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		EDBD0EF62412A46C00EA237D /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				EDBD0EF62412A46C00EA237D /* WeatherDataSource.swift */,
+				ED51F26F2412CC57002A0ABB /* TableViewDataSource.swift */,
 			);
 			path = "Data Source";
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				EDBD0EF72412A46C00EA237D /* WeatherDataSource.swift in Sources */,
 				E8AAE612237F849000709F2A /* WeatherListTableViewController.swift in Sources */,
 				E8616B11237F6DBA00D7E1AA /* AppDelegate.swift in Sources */,
+				ED51F2702412CC57002A0ABB /* TableViewDataSource.swift in Sources */,
 				E89EA165237FEA770088B545 /* Webservice.swift in Sources */,
 				E89EA168237FF56D0088B545 /* WeatherListViewModel.swift in Sources */,
 				E8C5FAFC2383D7EF00E4F949 /* AddCityViewModel.swift in Sources */,
