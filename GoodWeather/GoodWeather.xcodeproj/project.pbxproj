@@ -26,6 +26,7 @@
 		ED51F2702412CC57002A0ABB /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED51F26F2412CC57002A0ABB /* TableViewDataSource.swift */; };
 		ED51F2B32412ED25002A0ABB /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED51F2B22412ED25002A0ABB /* SettingsViewModelTests.swift */; };
 		EDBD0EF72412A46C00EA237D /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD0EF62412A46C00EA237D /* WeatherDataSource.swift */; };
+		EDE4C685241675DD008B6627 /* WeatherListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE4C684241675DD008B6627 /* WeatherListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		ED51F2AC2412EBEF002A0ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED51F2B22412ED25002A0ABB /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
 		EDBD0EF62412A46C00EA237D /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
+		EDE4C684241675DD008B6627 /* WeatherListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				ED51F2AC2412EBEF002A0ABB /* Info.plist */,
 				ED51F2B22412ED25002A0ABB /* SettingsViewModelTests.swift */,
+				EDE4C684241675DD008B6627 /* WeatherListViewModelTests.swift */,
 			);
 			path = GoodWeatherTests;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED51F2B32412ED25002A0ABB /* SettingsViewModelTests.swift in Sources */,
+				EDE4C685241675DD008B6627 /* WeatherListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
