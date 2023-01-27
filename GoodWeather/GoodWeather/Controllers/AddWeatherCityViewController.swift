@@ -1,11 +1,3 @@
-//
-//  AddWeatherCityViewController.swift
-//  GoodWeather
-//
-//  Created by Lucas Inocencio on 15/11/19.
-//  Copyright © 2019 Lucas Inocencio. All rights reserved.
-//
-
 import UIKit
 
 protocol AddWheatherDelegate {

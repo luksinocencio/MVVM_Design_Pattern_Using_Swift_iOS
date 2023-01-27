@@ -1,17 +1,6 @@
-//
-//  OrdersTableViewController.swift
-//  HotCoffee
-//
-//  Created by Lucas Inocencio on 15/11/19.
-//  Copyright © 2019 Lucas Inocencio. All rights reserved.
-//
-
-import Foundation
 import UIKit
 
 class OrdersTableViewController: UITableViewController, AddCoffeeOrderDelegate {
-    
-    
     var orderListViewModel = OrderListViewModel()
     
     override func viewDidLoad() {
@@ -69,5 +58,4 @@ class OrdersTableViewController: UITableViewController, AddCoffeeOrderDelegate {
         
         return cell
     }
-    
 }

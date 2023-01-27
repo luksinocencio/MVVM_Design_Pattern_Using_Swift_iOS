@@ -1,16 +1,6 @@
-//
-//  WeatherListTableViewController.swift
-//  GoodWeather
-//
-//  Created by Lucas Inocencio on 15/11/19.
-//  Copyright © 2019 Lucas Inocencio. All rights reserved.
-//
-
-import Foundation
 import UIKit
 
 class WeatherListTableViewController: UITableViewController, AddWheatherDelegate {
-    
     private var weatherListViewModel = WeatherListViewModel()
     private var datasource: TableViewDataSource<WeatherCell, WeatherViewModel>!
     
@@ -32,7 +22,6 @@ class WeatherListTableViewController: UITableViewController, AddWheatherDelegate
         self.tableView.reloadData()
         
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
@@ -72,17 +61,13 @@ class WeatherListTableViewController: UITableViewController, AddWheatherDelegate
     }
     
     private func prepareSegueForAddWeatherCityViewController(segue: UIStoryboardSegue) {
-        
         guard let nav = segue.destination as? UINavigationController else {
             fatalError("NavigationController not found")
         }
-        
         guard let addWeatherCityVC = nav.viewControllers.first as? AddWeatherCityViewController else {
             fatalError("AddWeatherCityController not found")
         }
-        
         addWeatherCityVC.delegate = self
-        
     }
 }
 
@@ -91,6 +76,4 @@ extension WeatherListTableViewController: SettingsDelegate {
         self.weatherListViewModel.updateUnit(to: vm.selectedUnit)
         self.tableView.reloadData()
     }
-    
-    
 }

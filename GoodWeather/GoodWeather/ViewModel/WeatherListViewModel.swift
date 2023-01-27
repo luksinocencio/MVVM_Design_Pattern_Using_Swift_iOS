@@ -1,15 +1,6 @@
-//
-//  WeatherListViewModel.swift
-//  GoodWeather
-//
-//  Created by Lucas Inocencio on 16/11/19.
-//  Copyright © 2019 Lucas Inocencio. All rights reserved.
-//
-
 import Foundation
 
 class WeatherListViewModel {
-    
     private(set) var weatherViewModels = [WeatherViewModel]()
     
     func addWeatherViewModel(_ vm: WeatherViewModel) {
@@ -57,7 +48,6 @@ class WeatherListViewModel {
         }
         
     }
-    
 }
 
 // Type Eraser
@@ -86,7 +76,6 @@ class Dynamic<T>: Decodable where T: Decodable {
 }
 
 struct WeatherViewModel: Decodable {
-    
     let name: Dynamic<String>
     var currentTemperature: TemperatureViewModel
     
@@ -100,11 +89,9 @@ struct WeatherViewModel: Decodable {
         case name
         case currentTemperature = "main"
     }
-    
 }
 
 struct TemperatureViewModel: Decodable {
-    
     var temperature: Dynamic<Double>
     let temperatureMin: Dynamic<Double>
     let temperatureMax: Dynamic<Double>

@@ -1,16 +1,6 @@
-//
-//  NewsListTableViewController.swift
-//  GoodNews
-//
-//  Created by Lucas Inocencio on 14/11/19.
-//  Copyright © 2019 Lucas Inocencio. All rights reserved.
-//
-
-import Foundation
 import UIKit
 
 //d398c2650c89495793db74ac96b35e83
-
 class NewsListTableViewController: UITableViewController {
     
     private var articleListVM: ArticleListViewModel!

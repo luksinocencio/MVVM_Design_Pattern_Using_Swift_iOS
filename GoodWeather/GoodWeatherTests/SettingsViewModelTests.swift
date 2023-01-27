@@ -1,21 +1,11 @@
-//
-//  SettingsViewModelTests.swift
-//  GoodWeatherTests
-//
-//  Created by P21 Sistemas on 06/03/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import XCTest
 @testable import GoodWeather
 
 class SettingsViewModelTests: XCTestCase {
-    
     private var settingsVM: SettingsViewModel!
     
     override func setUp() {
         super.setUp()
-        
         self.settingsVM = SettingsViewModel()
     }
     
@@ -26,7 +16,6 @@ class SettingsViewModelTests: XCTestCase {
     func test_celsius() {
         XCTAssertEqual(self.settingsVM.selectedUnit.displayName, "Celsius")
     }
-    
     
     func test_selection() {
         self.settingsVM.selectedUnit = .fahrenheit
@@ -40,5 +29,4 @@ class SettingsViewModelTests: XCTestCase {
         let userDefaults = UserDefaults.standard
         userDefaults.removeObject(forKey: "unit")
     }
-    
 }

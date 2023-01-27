@@ -1,11 +1,3 @@
-//
-//  WeatherListViewModelTests.swift
-//  GoodWeatherTests
-//
-//  Created by P21 Sistemas on 09/03/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import XCTest
 @testable import GoodWeather
 
@@ -38,5 +30,4 @@ class WeatherListViewModelTests: XCTestCase {
     override func tearDown() {
        super.tearDown()
     }
-
 }

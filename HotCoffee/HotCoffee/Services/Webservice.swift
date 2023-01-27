@@ -1,11 +1,3 @@
-//
-//  Webservice.swift
-//  HotCoffee
-//
-//  Created by Lucas Inocencio on 15/11/19.
-//  Copyright © 2019 Lucas Inocencio. All rights reserved.
-//
-
 import Foundation
 
 enum NetworkError: Error {
@@ -33,9 +25,7 @@ extension Resource {
 
 
 class Webservice {
-    
     func load<T>(resource: Resource<T>, completion: @escaping (Result<T, NetworkError>) -> Void) {
-        
         var request = URLRequest(url: resource.url)
         request.httpMethod = resource.httpMethod.rawValue
         request.httpBody = resource.body
